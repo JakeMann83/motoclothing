@@ -8,9 +8,28 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import Helmet from "react-helmet"
+import { withPrefix } from "gatsby"
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
+
+
+const newLocal = <Helmet>
+  <script src={withPrefix('bootstrap.min.js')} type="text/javascript" />
+  <script src={withPrefix('bootstrap.min.js.map')} type="text/javascript" />
+  <script src={withPrefix('contact-form-validator.min.js')} type="text/javascript" />
+  <script src={withPrefix('contact-form.js')} type="text/javascript" />
+  <script src={withPrefix('gallery.js')} type="text/javascript" />
+  <script src={withPrefix('jquery.countTo.js')} type="text/javascript" />
+  <script src={withPrefix('jquery.easing.min.js')} type="text/javascript" />
+  <script src={withPrefix('jquery.min.js')} type="text/javascript" />
+  <script src={withPrefix('jquery.shuffle.min.js')} type="text/javascript" />
+  <script src={withPrefix('owl.carousel.js')} type="text/javascript" />
+  <script src={withPrefix('preloader.js')} type="text/javascript" />
+  <script src={withPrefix('smooth-scroll.js')} type="text/javascript" />
+
+</Helmet>
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,22 +44,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+        newLocal
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> 
+      <div>  
         <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     </>
   )

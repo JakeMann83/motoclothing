@@ -5,7 +5,15 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: 'qqi1xht92weq',
+        accessToken: '-eKqc88jt-hAEsSTnHtmwcWi4A39uKQUzf5K0DZwwjQ'
+      }  
+    },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
