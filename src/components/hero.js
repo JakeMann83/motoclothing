@@ -23,11 +23,11 @@ const Hero = () => {
 
     return (
         <>
-            <div class="container">
-                <header class="home-header parallax">
-                    <div class="header-content dark text-center">
-                        <h1 class="header-title mb-0">{data.contentfulHero.heroTitle}</h1>
-                        <p class="inner-space mb-0">{data.contentfulHero.heroSubtitle}</p>
+            <div className="container">
+                <header className="home-header parallax">
+                    <div className="header-content dark text-center">
+                        <h1 className="header-title mb-0">{data.contentfulHero.heroTitle}</h1>
+                        <p className="inner-space mb-0">{data.contentfulHero.heroSubtitle}</p>
                     </div>
                 </header>
             </div>    
