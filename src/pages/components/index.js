@@ -25,11 +25,11 @@ const IndexBody = () => {
     
     
     return (
-        <section id="gallery" class="p-0 line-effect">
-            <div class="container">
+        <section id="gallery" className="p-0 line-effect">
+            <div className="container">
                 
-                <ul class="gallery-filter list-inline text-center">
-                    <li><Link to="#" data-group="all" class="active ml-2">SEE ALL</Link></li>
+                <ul className="gallery-filter list-inline text-center">
+                    <li><Link to="#" data-group="all" className="active ml-2">SEE ALL</Link></li>
                     <li><Link to="#" data-group="framed">FRAMED</Link></li>
                     <li><Link to="#" data-group="print">PRINT</Link></li>
                     <li><Link to="#" data-group="digital">DIGITAL</Link></li>
@@ -37,21 +37,21 @@ const IndexBody = () => {
                 </ul>
                 
             </div>
-            <div class="container full-width">
-                <h3 class="section-title hidden">GALLERY</h3>
-                <ul class="row gallery line-effect list-unstyled mb-0" id="grid">
+            <div className="container full-width">
+                <h3 className="section-title hidden">GALLERY</h3>
+                <ul className="row gallery line-effect list-unstyled mb-0" id="grid">
                     {data.allContentfulGallery.edges.map((edge) => {
                         return (
-                            <li class="col-md-6 col-lg-4 gallery" data-groups='["framed"]'>
-                                <figure class="gallery-item effect-bubba">
+                            <li className="col-md-6 col-lg-4 gallery" data-groups='["framed"]'>
+                                <figure className="gallery-item effect-bubba">
                                     <img src={edge.node.galleryImage.resize.src} alt={edge.node.galleryTitle} />
                                     <figcaption>
-                                        <div class="hover-content">
-                                            <h2 class="hover-title text-center text-white">{edge.node.galleryTitle}</h2>
-                                            <p class="gallery-info text-center text-white">{edge.node.gallerySubtitle}
-                                                <span class="gallery-icons">
-                                                    <Link to="#x" class="gallery-button" data-toggle="modal" data-target=".framed-product"><i class="fas fa-plus"></i></Link>
-                                                    <Link to="shopping-cart.html" class="gallery-button"><i class="fas fa-shopping-cart"></i></Link>
+                                        <div className="hover-content">
+                                            <h2 className="hover-title text-center text-white">{edge.node.galleryTitle}</h2>
+                                            <p className="gallery-info text-center text-white">{edge.node.gallerySubtitle}
+                                                <span className="gallery-icons">
+                                                    <Link to="#x" className="gallery-button" data-toggle="modal" data-target=".framed-product"><i className="fas fa-plus"></i></Link>
+                                                    <Link to="shopping-cart.html" className="gallery-button"><i className="fas fa-shopping-cart"></i></Link>
                                                 </span>
                                             </p>
                                         </div>

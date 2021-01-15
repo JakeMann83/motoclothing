@@ -14,10 +14,10 @@ import image4 from '../../images/client4.png'
 const Clients = () => (
 <>  
     
-    <h4 class="text-center">HAPPY CLIENTS</h4>
-    <div class="spacer spacer-line border-primary">&nbsp;</div>
-    <div class="container">
-        <div class="owl-carousel owl-theme">
+    <h4 className="text-center">HAPPY CLIENTS</h4>
+    <div className="spacer spacer-line border-primary">&nbsp;</div>
+    <div className="container">
+        <div className="owl-carousel owl-theme">
             <img src={image1} alt="" />
             <img src={image2} alt="" />
             <img src={image3} alt="" />
